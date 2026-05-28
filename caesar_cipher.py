@@ -7,7 +7,7 @@ def encrypt(text, shift):
     result = []
     for char in text:
         if char.isalpha():
-            base = 65 if char.isupper() else 97
+            base = 65 if char.isupper() else 97 
             # move the letter forward by shift, wrap around if it goes past Z
             shifted = (ord(char) - base + shift) % 26 + base
             result.append(chr(shifted))
